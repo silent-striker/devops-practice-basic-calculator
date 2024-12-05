@@ -158,7 +158,7 @@ function App() {
       const base_url = `${backend_domain}:${backend_port}`;
 
       // Request backend API with operands and operation type to get results
-      const api_response = await axios.post(`${base_url}/api/${current_operation}`, request_payload);
+      const api_response = await axios.post(`${base_url}/api/${api_endpoint}`, request_payload);
       // Format the returned result from API in case if large number
       const formatted_result = format_large_number(api_response.data.result);
       // Display result on the calculator display 
