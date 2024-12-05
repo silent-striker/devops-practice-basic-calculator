@@ -79,11 +79,11 @@ jobs:
       # Build Docker images
       - name: Build frontend Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/frontend:latest frontend/
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/calculator-frontend:latest frontend/
 
       - name: Build backend Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/backend:latest backend/
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/calculator-backend:latest backend/
 
       # Push Docker images
       - name: Push Docker images
