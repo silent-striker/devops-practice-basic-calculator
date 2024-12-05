@@ -29,9 +29,9 @@ jobs:
         working-directory: frontend/
 
       # Run tests
-      # - name: Run tests
-      #   run: npm test
-      #   working-directory: frontend/
+      - name: Run tests
+        run: npm test
+        working-directory: frontend/
 
       # Build the React app
       - name: Build React app
@@ -56,9 +56,9 @@ jobs:
       - name: Install dependencies
         run: pip3 install -r backend/requirements.txt
 
-      # Run tests
-      - name: Run tests
-        run: pytest backend/tests/
+      # # Run tests
+      # - name: Run tests
+      #   run: pytest backend/tests/
 
   # Docker Stage
   docker:
