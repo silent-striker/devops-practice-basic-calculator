@@ -14,7 +14,7 @@ services:
       - docker-network
 
   calculator-backend:
-    image: "priyatamsomagattu/calculator-backend:v1"
+    image: "priyatamsomagattu/calculator-backend:latest"
     container_name: calculator-backend
     ports:
       - "10000:10000"
