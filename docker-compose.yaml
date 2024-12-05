@@ -1,0 +1,24 @@
+networks:
+  docker-network:
+    driver: bridge
+
+services:
+  calculator-frontend:
+    image: "priyatamsomagattu/calculator-frontend:latest"
+    container_name: calculator-frontend
+    ports:
+      - "8080:3000"
+    depends_on:
+      - calculator-backend
+    networks:
+      - docker-network
+
+  calculator-backend:
+    image: "priyatamsomagattu/calculator-backend:v1"
+    container_name: calculator-backend
+    ports:
+      - "10000:10000"
+    environment:
+      PORT: 10000
+    networks:
+      - docker-network
