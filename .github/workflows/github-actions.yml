@@ -88,5 +88,5 @@ jobs:
       # Push Docker images
       - name: Push Docker images
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/frontend:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/backend:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/calculator-frontend:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/calculator-backend:latest
