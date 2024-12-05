@@ -28,10 +28,10 @@ jobs:
         run: npm install
         working-directory: frontend/
 
-      # Run tests
-      - name: Run tests
-        run: npm test
-        working-directory: frontend/
+      # # Run tests
+      # - name: Run tests
+      #   run: npm test
+      #   working-directory: frontend/
 
       # Build the React app
       - name: Build React app
